@@ -1,0 +1,13 @@
+/*
+ Theme Name: spaceTheme
+ Author: Lael Baker
+ Version: 1.0
+*/
+
+@import "base/variables.scss";
+@import "/modules/main.scss";
+@import "/modules/page.scss";
+@import "/modules/contact.scss";
+@import "/modules/index.scss";
+@import "/modules/single.scss";
+@import "/modules/header.scss";

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'eff';
+  src: url('../fonts/Manrope-Light') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0; padding: 0;
+}
+body {
+  background: black;
+  z-index: -1;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  margin: 0; padding: 0;
+  overflow: hidden;
+  grid-template-columns: repeat(4, 25%);
+  gap: 0px;
+  grid-template-rows: 800px 1500px 300px; }
+
+.grid1 {
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 1;
+  background: whitesmoke;
+  .text {
+    font-family: manrope;
+    font-size: 70px;
+    h1 {font-weight: 400;}
+    user-select: none;
+    text-align: center;
+    margin-top: 0px;
+    span {
+      font-family: manrope;
+      font-style: italic;
+      font-weight: 200;
+    }
+  }
+  .imageC {
+    display: flex; justify-content: center;
+    .image {
+      canvas {
+        border-radius: 15px;
+        margin-top: 20px;
+      }
+      min-width: 800px;
+      height: 500px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.grid2 {
+  background: whitesmoke;
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 4;
+  padding-top: 100px;
+  .flex {
+    .left {
+      font-family: manrope;
+      img {
+        width: 500px;
+      }
+    }
+  }
+}
+.grid3 {
+  background: whitesmoke;
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 4;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Manrope';
+  height: 100%;
+  padding-top: 60px;
+  .flex1 {
+      width: 25%;
+      margin-left: 5%;
+      text-transform: uppercase;
+      font-size: 24px;
+  }
+  .flex2 {
+      width: 50%;
+      font-size: 70px;
+      font-weight: 500;
+      text-align: center;
+  }
+  .flex3 {
+      width: 25%;
+      justify-content: center;
+      display: flex; 
+      height: 90px;
+      align-items: center;
+      button {
+          background: yellow;
+          border-radius: 50%;
+          width: 100px; height: 100px;
+          border: none;
+          font-size: 60px; font-family: 'Manrope';
+          font-weight: 100;
+
+      }
+  }
+}
+
+
+.wp-block-columns {
+  width: 95vw;
+  margin-left: 2.5vw;
+  margin-top: 40px;
+  user-select: none;
+}
+.wp-block-image {
+  border-radius: 14px;
+  figcaption {
+    font-family: italiana;
+    font-size: 24px;
+    font-weight: 600;
+    width: 80%;
+  }
+}
+@media (max-width: 1100px) {
+.grid {
+  grid-template-rows: 800px 140vw 300px;
+}
+}
+@media (max-width: 950px) {
+  .grid {
+    grid-template-rows: 800px 150vw 300px;
+  }
+}
+@media (max-width: 750px) {
+  .grid {
+    grid-template-rows: 800px 160vw 300px;
+  }
+}
+@media (max-width: 650px) {
+  .grid {
+    grid-template-rows: 800px 175vw 300px;
+  }
+}
+@media (max-width: 600px) {
+  .grid {
+    grid-template-rows: 800px 2250px 500px;
+  }
+  .grid3 .flex1 {
+    display: none;
+  }
+  .grid3 .flex2 {
+    text-align: left;
+    padding-left: 50px;
+  }
+  .wp-block-columns {
+    width: 100vw;
+    margin-left: 7vw;
+  }
+  .wp-block-image {
+    figcaption {
+      width: 90%;
+    }
+  }
+}
