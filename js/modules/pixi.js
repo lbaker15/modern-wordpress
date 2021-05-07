@@ -1,18 +1,20 @@
-import disp from '/images/displacement1.jpg';
+import di from '/images/displacement1.jpg';
+import di2 from '/images/wolf.png';
 import image1 from '/images/fashion1.jpg';
 import image2 from '/images/fashion2.jpg';
 import image3 from '/images/fashion3.jpg';
-let images = [image1, image2, image3]
-
+let images = [image1, image2, image3];
+let disp;
 const sections = document.querySelectorAll("#canvas")
-
 sections.forEach((section, i) => {
-  // console.log(Array.from(section.childNodes)[1].src )
   let originalImageSource;
   if (Array.from(section.childNodes)[1].src) {
     originalImageSource = Array.from(section.childNodes)[1].src;
+    let a = Array.from(section.childNodes)[3]
+    disp = Object.values(a.dataset)[0]
   } else {
     originalImageSource = image2;
+    disp = null
   }
   let _w = window.innerWidth; let _h = window.innerHeight;
   // set up a pixi application
@@ -30,9 +32,6 @@ sections.forEach((section, i) => {
       transparent: true
     })
   }
-  // app.renderer.view.style.borderRadius = 100
-  // console.log(app.renderer.view.style.borderRadius)
-  // add the pixi application to the section tag
   section.appendChild(app.view)
   
   // make a new image
@@ -120,7 +119,6 @@ sections.forEach((section, i) => {
         new PIXI.filters.DisplacementFilter(displacementImage, 10),
       ]
       aimX = window.scrollY*5; aimY = window.scrollY*5;
-      console.log(window.scrollY)
       timer = setTimeout(() => {
         app.stage.removeChild(displacementImage)
         image.filters = []

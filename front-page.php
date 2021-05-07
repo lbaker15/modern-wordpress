@@ -6,6 +6,7 @@
                     <div class="imageC">
                         <div id="canvas" class="image">
                             <img style="display:none;" src="<?php echo get_theme_file_uri('/images/fashion4.jpg')  ?>" />
+                            <span data-value="<?php echo get_theme_file_uri('/images/displacement1.jpg') ?>"></span>
                         </div>
                     </div>
                 </div>
